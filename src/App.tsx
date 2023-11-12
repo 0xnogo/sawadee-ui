@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ChakraProvider, Container, Heading, VStack } from '@chakra-ui/react';
+import LocationForm from './components/LocationForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <ChakraProvider>
+      <Container maxW='md' bg='blue.600' color='white' padding='10' centerContent>
+        <VStack spacing='10px'>
+          <Heading size='lg' fontSize='50px'>
+            Sawadee
+          </Heading>
+          <LocationForm />
+        </VStack>
+      </Container>
+    </ChakraProvider>
   );
 }
 
